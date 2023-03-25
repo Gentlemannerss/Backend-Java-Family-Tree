@@ -4,13 +4,14 @@ public class Pet {
     String name;
     int age;
     String species;
-    String owner;
+    Person owner;
 
     // ------------- Constructor
-    public Pet(String name, int age, String species) {
+    public Pet(String name, int age, String species, Person owner) {
         this.name = name;
         this.age = age;
         this.species = species;
+        this.owner = owner;
     }
 
     // --------------- Getters & Setters
@@ -39,11 +40,11 @@ public class Pet {
         this.species = species;
     }
 
-    public String getOwner() {
+    public Person getOwner() {
         return owner;
     }
 
-    public void setOwner(String owner) {
+    public void setOwner(Person owner) {
         this.owner = owner;
     }
 }
