@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Person {
     private String name;
@@ -66,7 +67,22 @@ public class Person {
         person.setSiblings(family);
     }
 
-    public void getGrandChilderen() {
+    public List<Person> getGrandChilderen() {
+        List<Person> grandChildren = new ArrayList<>();
+        for (Person c : childeren) {
+            for (Person child : c.getChilderen()) {
+                grandChildren.add(child);
+            }
+        }
+        return grandChildren;
+    }
+
+    // Poging op een andere mogelijkheid dit te implementeren. Geen succes.
+    public void getGrandChildren(Person person, Person child) {
+        ArrayList<Person> grandChildren = new ArrayList<>();
+        if (person.getChilderen() != null) {
+
+        }
 
     }
 
